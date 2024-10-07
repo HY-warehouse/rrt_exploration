@@ -1,0 +1,1 @@
+geopoints_msgs/single_GeoPoint[] multi_geopoints

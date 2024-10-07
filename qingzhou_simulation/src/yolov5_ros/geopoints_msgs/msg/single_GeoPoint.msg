@@ -1,0 +1,3 @@
+string Class
+string OriginalClass
+geometry_msgs/PointStamped single_geopoint

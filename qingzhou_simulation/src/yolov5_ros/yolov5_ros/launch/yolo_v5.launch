@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+  <!-- Load Parameter -->
+  <!--当没有cuda环境时，将use_cpu调为true-->
+  <param name="yolov5_path"       value="$(find yolov5_ros)/yolov5"/>
+  <param name="use_cpu"           value="false" />
+
+  <!-- Start yolov5 and ros wrapper -->
+  <!--以下为节点设置-->
+  <node pkg="yolov5_ros" type="yolo_v5.py" name="yolov5" ns="robot_1" output="screen" >
+    <param name="weight_path"       value="$(find yolov5_ros)/weights/yolov5s.pt"/>
+    <param name="image_topic"       value="/robot_1/kinect/rgb/image_raw" />
+    <param name ="odom_pose"        value="/robot_1/odom"/>
+       <param name="pub_topic"         value="/robot_1/yolov5/BoundingBoxes" />
+    <param name="camera_frame"       value="camera_color_frame"/>
+    <param name="conf"              value="0.3" />
+  </node>
+
+  <node pkg="yolov5_ros" type="yolo_v5.py" name="robot_2" output="screen" >
+    <param name="weight_path"       value="$(find yolov5_ros)/weights/yolov5s.pt"/>
+    <param name="image_topic"       value="/robot_2/kinect/rgb/image_raw" />
+    <param name ="odom_pose"        value="/robot_2/odom"/>
+    <param name="pub_topic"         value="/robot_2/yolov5/BoundingBoxes" />
+    <param name="camera_frame"       value="camera_color_frame"/>
+    <param name="conf"              value="0.3" />
+  </node>
+  
+  <node pkg="yolov5_ros" type="yolo_v5.py" name="robot_3_yolo" output="screen" >
+    <param name="weight_path"       value="$(find yolov5_ros)/weights/yolov5s.pt"/>
+    <param name="image_topic"       value="/robot_3/kinect/rgb/image_raw" />
+    <param name ="odom_pose"        value="/robot_3/odom"/>
+    <param name="pub_topic"         value="/robot_3/yolov5/BoundingBoxes" />
+    <param name="camera_frame"       value="camera_color_frame"/>
+    <param name="conf"              value="0.3" />
+  </node>
+
+  <node pkg="yolov5_ros" type="yolo_v5.py" name="robot_4_yolo" output="screen" >
+    <param name="weight_path"       value="$(find yolov5_ros)/weights/yolov5s.pt"/>
+    <param name="image_topic"       value="/robot_4/kinect/rgb/image_raw" />
+    <param name ="odom_pose"        value="/robot_4/odom"/>
+    <param name="pub_topic"         value="/robot_4/yolov5/BoundingBoxes" />
+    <param name="camera_frame"       value="camera_color_frame"/>
+    <param name="conf"              value="0.3" />
+  </node>
+
+  <node pkg="rgbd_detection2d_3d" type="rgbd_detection2d_3d" name="robot_rgbdtection" ns="robot_1">
+  <param name="detection_2d_topic" value="/robot_1/yolov5/BoundingBoxes"/>
+  <param name="depth_registered_points_topic" value="/robot_1/kinect/depth/points"/>
+  </node>
+  <node pkg="rgbd_detection2d_3d" type="rgbd_detection2d_3d" name="robot_rgbdtection" ns="robot_2">
+  <param name="detection_2d_topic" value="/robot_2/yolov5/BoundingBoxes"/>
+  <param name="depth_registered_points_topic" value="/robot_2/kinect/depth/points"/>
+  </node>
+  <node pkg="rgbd_detection2d_3d" type="rgbd_detection2d_3d" name="robot_rgbdtection" ns="robot_3">
+  <param name="detection_2d_topic" value="/robot_3/yolov5/BoundingBoxes"/>
+  <param name="depth_registered_points_topic" value="/robot_3/kinect/depth/points"/>
+  </node>
+  <node pkg="rgbd_detection2d_3d" type="rgbd_detection2d_3d" name="robot_rgbdtection" ns="robot_4">
+  <param name="detection_2d_topic" value="/robot_4/yolov5/BoundingBoxes"/>
+  <param name="depth_registered_points_topic" value="/robot_4/kinect/depth/points"/>
+  </node>
+
+
+  <node pkg="boundingbox_sub" type="boundingbox_sub.py" name="boundingbox_sub">
+  <param name="rgbdtopic1" value="/robot_1/robot_rgbdtection/rgbd_detection/points"/>
+  <param name="rgbdtopic2" value="/robot_2/robot_rgbdtection/rgbd_detection/points"/>
+  <param name="rgbdtopic3" value="/robot_3/robot_rgbdtection/rgbd_detection/points"/>
+  <param name="rgbdtopic4" value="/robot_4/robot_rgbdtection/rgbd_detection/points"/>
+  </node>
+
+</launch>

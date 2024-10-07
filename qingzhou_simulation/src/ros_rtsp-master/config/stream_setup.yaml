@@ -1,0 +1,39 @@
+# Set up your streams to rtsp here.
+port: "8554"
+streams: # Cannot rename - must leave this as is.
+
+  stream-1:
+    type: topic
+    source: /robot_1/camera_link/image_raw
+    mountpoint: /back
+    caps: video/x-raw,framerate=10/1,width=800,height=800
+    bitrate: 500
+
+  stream-2:
+    type: topic
+    source: /robot_2/camera_link/image_raw
+    mountpoint: /back1
+    caps: video/x-raw,framerate=10/1,width=800,height=800
+    bitrate: 500
+
+  stream-3:
+    type: topic
+    source: /robot_3/camera_link/image_raw
+    mountpoint: /back2
+    caps: video/x-raw,framerate=10/1,width=800,height=800
+    bitrate: 500
+
+  stream-4:
+    type: topic
+    source: /robot_4/camera_link/image_raw
+    mountpoint: /back3
+    caps: video/x-raw,framerate=10/1,width=800,height=800
+    bitrate: 500
+
+  stream-5:
+    type: topic
+    source: /map_image
+    mountpoint: /back4
+    caps: video/x-raw,framerate=10/1,width=800,height=800
+    bitrate: 500
+

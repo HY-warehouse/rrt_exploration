@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/stars/rrt_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/stars/rrt_ws/src/rrt_exploration/include/**",
+        "/home/stars/qingzhou_simulation/src/steer_drive_ros/steer_bot_hardware_gazebo/include/**",
+        "/home/stars/qingzhou_simulation/src/steer_drive_ros/steer_drive_controller/include/**",
+        "/home/stars/qingzhou_simulation/src/steer_drive_ros/stepback_and_steerturn_recovery/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}
