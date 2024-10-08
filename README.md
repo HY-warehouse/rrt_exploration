@@ -62,3 +62,10 @@ sudo apt-get install ros-melodic-visualization-tutorials
     
 8. Start the script to publish the coordinates of special targets.
     Use the `publish point` tool in RViz to mark five points. The first four points should form a rectangle, which defines the growth boundary of the global random tree, so it should be as large as possible (at least covering the entire environment). Importantly, the order of these four points should be top-left, bottom-left, bottom-right, and top-right. The last point sets the root node where the global random tree starts growing, and this point must be within the already mapped area.
+
+## Contributors
+
+<a href="https://github.com/Saint.Hao/rrt_exploration/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Saint.Hao/rrt_exploration" />
+</a>
+
