@@ -33,6 +33,7 @@ sudo apt install nvidia-driver-525
 ### Install CUDA 11.6 and CUDNN
 The official address for CUDA and CUDNN installation is as follows.
 [CUDA Toolkit Archive](https://developer.nvidia.com/cuda-toolkit-archive)
+
 [CUDA Deep Neural Network](https://developer.nvidia.com/cudnn)
 
 ### Install Anaconda
