@@ -2,7 +2,7 @@ The repository is designed for the Ubuntu 18.04 operating system environment. Ho
 
 ## File Description
 - `qingzhou_simulation` contains the source code for all tasks. To reproduce, create a package, move the `src` folder from this directory into the created workspace, and compile using `catkin_make` (if compilation fails, please recompile as this is due to the compilation order).
-- `RTSPTool_six_windows` is the Qt source code. Open this folder with Qt Creator, compile, and run to open the video transmission system (provided that the ffmpeg tool is configured, see [(./Environment_Installation_and_Configuration.md) for specific configuration methods).
+- `RTSPTool_six_windows` is the Qt source code. Open this folder with Qt Creator, compile, and run to open the video transmission system (provided that the ffmpeg tool is configured, see [Environment Installation and Configuration](./Environment_Installation_and_Configuration.md) for specific configuration methods).
 - The `models` folder contains our custom model file `my_environment`. Before starting the simulation environment, add `my_environment` to the Gazebo model library.
   To add it, open the folder, use `ctrl+h` to show hidden folders, go to `.gazebo`, then to the `models` folder, and copy `my_environment` there.
   
@@ -62,3 +62,10 @@ sudo apt-get install ros-melodic-visualization-tutorials
     
 8. Start the script to publish the coordinates of special targets.
     Use the `publish point` tool in RViz to mark five points. The first four points should form a rectangle, which defines the growth boundary of the global random tree, so it should be as large as possible (at least covering the entire environment). Importantly, the order of these four points should be top-left, bottom-left, bottom-right, and top-right. The last point sets the root node where the global random tree starts growing, and this point must be within the already mapped area.
+
+## Contributors
+
+<a href="https://github.com/用户名/项目名/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=用户名/项目名" />
+</a>
+
