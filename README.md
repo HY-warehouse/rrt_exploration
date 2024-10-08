@@ -1,3 +1,5 @@
+**This project involves multi-robot exploration and mapping using an Ackerman car-like robot, and includes reconnaissance. The project is a collaborative effort by five members. The multi-robot exploration uses the open-source RRT exploration algorithm, which has been ported to ROS Melodic and ROS Noetic. For reconnaissance, YOLOv5 is used, and the visualization software for the reconnaissance results is developed using QT5 and PyQT.**
+
 The repository is designed for the Ubuntu 18.04 operating system environment. However, after modifying several robot URDF files, it can still run smoothly on Ubuntu 20.04.
 
 ## File Description
