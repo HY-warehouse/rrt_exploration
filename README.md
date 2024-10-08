@@ -69,7 +69,7 @@ sudo apt-get install ros-melodic-visualization-tutorials
 
 ## Contributors
 
-<a href="https://github.com/用户名/项目名/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=用户名/项目名" />
+<a href="https://github.com/cookedpotatoes114514/rrt_exploration/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=cookedpotatoes114514/rrt_exploration" />
 </a>
 
