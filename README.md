@@ -65,7 +65,7 @@ sudo apt-get install ros-melodic-visualization-tutorials
 
 ## Contributors
 
-<a href="https://github.com/Saint.Hao/rrt_exploration/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Saint.Hao/rrt_exploration" />
+<a href="https://github.com/用户名/项目名/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=用户名/项目名" />
 </a>
 
