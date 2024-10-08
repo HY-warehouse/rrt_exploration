@@ -73,17 +73,14 @@ sudo apt-get install ros-melodic-visualization-tutorials
   <img src="https://avatars.githubusercontent.com/u/103250331?v=4" width="100" height="100"/>
 </a>
 
-
 <a href="https://github.com/lrlqaq">
   <img src="https://avatars.githubusercontent.com/u/121630424?v=4" width="100" height="100"/>
 </a>
 
+<a href="https://github.com/LeonickyLiu">
+  <img src="https://avatars.githubusercontent.com/u/147980030?v=4" width="100" height="100"/>
+</a>
 
 <a href="https://github.com/CookedPotatoes114514">
   <img src="https://avatars.githubusercontent.com/u/184182973?v=4" width="100" height="100"/>
-</a>
-
-
-<a href="https://github.com/cookedpotatoes114514/rrt_exploration/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=cookedpotatoes114514/rrt_exploration" />
 </a>
